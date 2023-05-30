@@ -4,12 +4,21 @@
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
+    "start:dev": "expo start --dev-client",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build:apk": "eas build -p android --profile preview",
+    "build:store": "eas build -p android --profile production",
+    "start:emulator": "emulator -avd Pixel_2_API_33",
+    "build:client:simulator": "eas build --profile development --platform android"
   },
   "dependencies": {
+    "@rnmapbox/maps": "^10.0.7-rc.1",
+    "@turf/circle": "^6.5.0",
     "expo": "~48.0.15",
+    "expo-dev-client": "~2.2.1",
+    "expo-location": "^15.1.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.8"

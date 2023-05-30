@@ -1,5 +1,20 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permitir que o app $(PRODUCT_NAME) use sua localização."
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiZmlsaXBlbGVvbmVsYmF0aXN0YSIsImEiOiJjbGlhYjNhN2IwMWxnM2RwZjE2aTV6eW93In0.yEkCUYM9jf-xhfPH-AuvAA"
+        }
+      ]
+    ],
     "name": "teste-mapa",
     "slug": "teste-mapa",
     "version": "1.0.0",
@@ -21,10 +36,21 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE"
+      ],
+      "package": "com.filipegaucho22.testemapa"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6fb6a920-c08c-4a09-b3e2-98c547dbec3e"
+      }
     }
   }
 }
